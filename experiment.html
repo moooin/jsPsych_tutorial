@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Experiment - for Hello-World-Tutorial</title>
+        <!-- to import the library--->
+        <script src="jspsych-6.1.0/jspsych.js"></script>
+        <!-- to import the plugin--->
+        <script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
+        <!-- to import the stylesheet--->
+        <link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+    </head>
+    <body></body>
+    <!-- to add JS code directly to the webpage for creating using the plugin -->
+    <script>
+    
+    /* to declare a trial that uses the plugin, 
+                       by creating a JS object with property 'type'*/
+    var hello_trial = {
+        type: 'html-keyboard-response',
+        stimulus: 'Hello world!'
+    }
+
+    /* to tell jsPsych to run an experiment consisting of this trial, 
+                       by using function 'jsPsych.init' and parameter 'timeline'*/
+    jsPsych.init({
+        timeline: [hello_trial]
+    })
+
+    </script>
+</html>
